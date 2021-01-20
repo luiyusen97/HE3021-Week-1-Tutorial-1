@@ -1,6 +1,6 @@
 ---
-title: "tutorial_1_submission"
-author: "luiyusen97"
+title: "HE3021 Tutorial 1 Attempt"
+author: "Lui Yu Sen"
 date: "1/20/2021"
 output: pdf_document
 ---
