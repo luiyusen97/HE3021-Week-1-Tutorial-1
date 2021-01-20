@@ -5,7 +5,7 @@ date: "1/20/2021"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("tidyverse")
 library("foreign")
