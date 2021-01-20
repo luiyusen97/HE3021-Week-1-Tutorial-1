@@ -90,13 +90,13 @@ beta_2 <- model$coefficients["npvis_squared"]
 The partial effect is $32.8npvis+(-0.669)npvis^2$.
 
 # (h)
-$0=\frac{\partial bwght}{\partial npvis}=32.8+(-0.669)npvis*2$
-$npvis=\frac{32.8}{2*(-0.669)}$
+$0=\frac{\partial bwght}{\partial npvis}=32.8+(-0.669)npvis*2$,
+$npvis=\frac{32.8}{2*(0.669)}$
 ```{r part_h, echo=TRUE}
-turning_pt <- beta_1/(2*beta_2)
+turning_pt <- beta_1/(2*-beta_2)
 print(turning_pt)
 ```
-$npvis= -24.50519$
+$npvis= 24.50519$
 Diminishing marginal returns of additional pre-natal visits since there is not much more the doctor can check.
 
 # (i)
