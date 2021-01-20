@@ -57,14 +57,16 @@ print(beta_3)
 # (e)
 $H_0:\beta_3=-10$, $H_a:\beta_3\neq-10$, $\alpha=0.05$, 2-tailed 1-sample t-test.
 ```{r part_e, echo=TRUE}
-t_test_2tail_variable_hypo <- function(hypothesis, significance_lvl, df, sample_value, standard_error){
+t_test_2tail_variable_hypo <- function(
+    hypothesis, significance_lvl, df, sample_value, standard_error){
     confidence_interval <- hypothesis +c(-1, 1)*qt(p = 1-significance_lvl/2,
                                             df = df)*standard_error
     if (between(sample_value, confidence_interval[1], confidence_interval[2])){
         return(FALSE)
     } else {return(TRUE)}
 }
-test_beta_3 <- t_test_2tail_variable_hypo(-10, 0.05, 1651, beta_3, 3.3330) # TRUE means insignificantly different from -10
+test_beta_3 <- t_test_2tail_variable_hypo(
+    -10, 0.05, 1651, beta_3, 3.3330) # TRUE means insignificantly different from -10
 confidence_interval <- -10 + c(-1, 1)*qt(p = 0.975, df = 1651)*3.3330
 print(confidence_interval)
 ```
@@ -73,7 +75,8 @@ Since $\beta_3\in[-16.54,-3.46]$, then we have insufficient evidence to reject $
 # (f)
 $H_0:\beta_4=100$, $H_a:\beta_4\neq100$, $\alpha=0.05$, 2-tailed 2-sample Welsh t-test.
 ```{r part_f, echo=TRUE}
-test_beta_4 <- t_test_2tail_variable_hypo(100, 0.05, 1651, beta_3, 27.9757) # TRUE means insignificantly different from +100
+test_beta_4 <- t_test_2tail_variable_hypo(
+    100, 0.05, 1651, beta_3, 27.9757) # TRUE means insignificantly different from +100
 confidence_interval <- 100 + c(-1, 1)*qt(p = 0.975, df = 1651)*27.9757
 print(confidence_interval)
 ```
