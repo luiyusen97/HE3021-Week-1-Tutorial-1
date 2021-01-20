@@ -1,0 +1,43 @@
+---
+title: "tutorial_1_submission"
+author: "luiyusen97"
+date: "1/20/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r filepath, echo=FALSE}
+fil <- 
+    "C:\\Users\\Lui Yu Sen\\Google Drive\\NTU_study materials\\Economics\\HE3021 Intermediate Econometrics\\Week 1\\HE3021-Week-1-Tutorial-1\\rawdata\\bwght2.dta"
+```
+
+Initial reading of raw data.
+
+```{r init_read, echo=TRUE}
+library("tidyverse")
+library("foreign")
+library("ggplot2")
+
+dat <- read.dta(file = fil)
+dat <- mutate(dat, npvis_squared = npvis**2)
+
+model <- lm(bwght ~ npvis + npvis_squared + cigs + male, dat)
+```
+
+# (a)
+```{r init_read, echo=TRUE}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
