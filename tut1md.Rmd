@@ -124,4 +124,4 @@ Since $+100\in[45.42227,154.57773]$, then we cannot reject $H_0:\beta_4=100$.
 
 # (j)
 
-No, I do not think we can have the zero conditional mean, because income can be correlated with pre-natal visits since poorer people can come from locations where clinics are inaccessible. 
+No, I do not think we can have the zero conditional mean, because income can be correlated with pre-natal visits since poorer people can come from locations where clinics are inaccessible. Income itself can influence mother's nutrition, which can influence baby weight.
